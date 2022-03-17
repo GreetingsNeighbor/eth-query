@@ -1,7 +1,9 @@
 const http = require("http");
 require("dotenv").config();
 var Web3 = require("web3");
-var web3 = new Web3(new Web3.providers.HttpProvider(process.env.ENDPOINT));
+var web3 = new Web3(
+  new Web3.providers.HttpProvider(process.env.INFURA_ENDPOINT)
+);
 
 console.log();
 const ADDRESS = "0xB07626Bc2fF18d680ec886c3109e9BF6ee05E6b7";
@@ -27,7 +29,7 @@ async function computeHasPending(index) {
 
 async function queryBalances() {
   for (index in accountBalances) {
-    let endpoint = process.env.ENDPOINT.replace(
+    let endpoint = process.env.INFURA_ENDPOINT.replace(
       "ENDPOINT",
       accountBalances[index].network
     );
