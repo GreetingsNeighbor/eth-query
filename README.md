@@ -6,16 +6,16 @@ etherjs and web3js example using quicknode and infura
 
 npm install
 
-You need to add an .env file containing:
+###You need to add an .env file containing **Note:ENDPOINT will be replaced with the different chain/networks**:
 
-INFURA_ENDPOINT=  
+PROJECT_ID=
 QUICKNODE_PROVIDER=
 
-### What does the example do
+## What does the example do
 
 gets balance from the ADDRESS provided  
 the example does **not** check for pendingTransactions as getPendingTransactions failed using infura
 
-### future addition
+## future addition
 
 After setting up geth, updating the blockchain, it might be interesting to see what it takes to get all transactions of an address.
